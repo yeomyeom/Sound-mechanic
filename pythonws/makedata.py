@@ -4,8 +4,8 @@ import subprocess
 
 #https://wikidocs.net/26366
 
-name = "no_problem"                             #label name
-data_path = "D://pythonws//ML_data//"           #ML data txt file 모아둔 곳
+name = "bad_ball_joint"                             #label name
+data_path = "C://Users//eom02//Documents//GitHub//Sound-mechanic//pythonws//ML_data//"           #ML data txt file 모아둔 곳
 file_name = name + ".txt"
 wav_path = data_path + name + "_mp4//"   #save mp4 data and 그냥 잘린 데이터
 ml_path = data_path + name +"//"         #complete machine learning training data
@@ -47,7 +47,7 @@ while True:
                 print(time)
                 for sec in time:
                     print("print sec : " + str(sec))
-                    if time.index(sec) % 2 == 1:
+                    if time.index(sec) % 2 == 0:
                         start = sec * 1000
                         print(start)
                     else:
@@ -66,8 +66,9 @@ while True:
                 i += 1
                 print('fail')
 
-    except:
+    except Exception as ex:
         i += 1
+        print(ex)
         print('download fail')
 
 #sound.streams.filter(only_audio=True).all()[1].download()
