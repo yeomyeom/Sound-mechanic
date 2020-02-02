@@ -5,7 +5,8 @@ import subprocess
 # https://wikidocs.net/26366
 
 # machine learning label setting
-name_list = ["bad_ball_joint", "bad_brake_pad", "engine_seizing_up", "failing_water_pump", "hole_in_muffler", "no_problem"]
+name_list = ["bad_ball_joint", "bad_brake_pad", "engine_seizing_up", "failing_water_pump", "hole_in_muffler",
+             "no_problem"]
 name = "no_problem"  # label name
 file_name = name + ".txt"
 
@@ -59,6 +60,9 @@ while True:
                 wav = AudioSegment.from_wav(wav_path + str(i).zfill(2) + ".wav")
                 number_of_execute = 1
                 print(time)
+                start = 0
+                finish = 0
+                cut_wav = []
                 for sec in time:
                     print("print sec : " + str(sec))
                     if time.index(sec) % 2 == 0:
@@ -70,19 +74,31 @@ while True:
                             number_of_execute += 1
                         else:
                             cut_wav += wav[start:finish]
-                # store wav file
-                cut_wav.export(ml_path + "edit" + str(i).zfill(2) + ".wav", format="wav",
-                               parameters=["-ab", str(audio_bit_rate), "-ac", str(audio_channels), "-ar", str(audio_sampling_rate)])
-                print('download' + str(i).zfill(2) + "is finished")
+                # cut wav file to time slice
+                slice_number = 0
+                slice_start = 0
+                while 1 == 1:
+                    slice_finish = slice_start + time_slice
+                    if len(cut_wav) < slice_finish * 1000:
+                        break
+                    edit_wav = cut_wav[slice_start*1000:slice_finish*1000]
+                    # store wav file
+                    edit_wav.export(ml_path + "edit" + str(i).zfill(2) + str(slice_number).zfill(3) + ".wav", format="wav",
+                                    parameters=["-ab", str(audio_bit_rate), "-ac", str(audio_channels), "-ar",
+                                                str(audio_sampling_rate)])
+                    slice_number += 1
+                    slice_start += time_interval
+                    print(str(slice_number))
+                print("download" + str(i).zfill(2) + "is finished")
                 i += 1
                 break
             else:
                 i += 1
-                print('fail')
+                print("number" + str(i).zfill(2) + "is fail")
 
     except Exception as error:
         i += 1
-        print("Error Occur : " + error)
+        print("Error Occur : " + str(error))
         print('download fail')
         pass
 

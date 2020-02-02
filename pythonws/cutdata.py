@@ -1,6 +1,8 @@
 import numpy as np
 from pydub import AudioSegment
+import os
 
+'''
 path1 = "D://pythonws//ML_data//bad_ball_joint//00.wav"
 path2 = "D://pythonws//ML_data//bad_ball_joint//01.wav"
 test_path = "D://pythonws2//makeMLdata//test"
@@ -33,3 +35,16 @@ for time in tests:
         finish = time
         print("start : "+str(start))
         print("finish : "+str(finish))
+'''
+
+path_dir = "D://pythonws//ML_data//no_problem//"
+file_list = os.listdir(path_dir)
+file_list.sort()
+
+for file_name in file_list:
+    file_type = file_name.split(".")
+    if file_type == "wav":
+        print(file_name)
+        # 이 파일명을 기준으로 .png 파일 만들기
+    else:
+        pass
