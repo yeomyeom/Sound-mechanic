@@ -1,0 +1,4 @@
+1. 최초 모델 no problem 안됨
+2. no_problem 안되서 engine sezing up 데이터좀 지움
+3. 데이터 추가 전
+4. 데이터 추가 후

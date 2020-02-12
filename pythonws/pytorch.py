@@ -88,7 +88,11 @@ def pcm_to_wav(name_tmp):
 def cut_wav_only3sec():
     wav = AudioSegment.from_wav(wav_path + wav_name + ".wav")
     if len(wav) > time_slice * 1000:
-        return wav[1000:4000]
+        edit_wav = wav[1000:4000]
+        edit_wav.export(wav_path + wav_name, format="wav",
+                parameters=["-ab", str(audio_bit_rate),
+                    "-ac", str(audio_channels),
+                    "-ar", str(audio_sampling_rate)])
 
 
 def cut_wav_multi():
