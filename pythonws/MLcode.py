@@ -92,7 +92,7 @@ def wav_to_mel():
 
 
 def predict():
-    defaults.device = torch.device('cpu')
+    # defaults.device = torch.device('cpu')
     learn = load_learner(mod_path)
     img = open_image(img_path + img_name + img_type)
     predict_class, predict_idx, output = learn.predict(img)
