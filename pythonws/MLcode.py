@@ -25,12 +25,12 @@ audio_channels = 1  # 1 is mono 2 is stereo, mono is default setting in android 
 
 # file path & name setting
 wav_type = '.wav'
-wav_path = 'D://pythonws//ML_data//data//no_problem//'  # 스맛폰에서 보내온 녹음 파일 경로 (다른 형식->wav)
-wav_name = ''  # 스맛폰에서 보내온 녹음 파일 이름 (pcm->wav)
+wav_path = '/app/MD_Web/test/Sound-mechanic/pythonws/ML_data/data/no_problem/'
+wav_name = ''  
 img_type = '.png'
-img_path = 'D://pythonws//ML_data//data//no_problem//'  # 녹음 파일을 mel spectrogram 으로 변환하여 저장할 경로
-img_name = ''  # 녹음 파일을 mel spectrogram 으로 변환하여 저장할 이름
-mod_path = 'D://pythonws//ML_data//data//'  # 트레이닝 완료된 모델 경로
+img_path = '/app/MD_Web/test/Sound-mechanic/pythonws/ML_data/data/no_problem/' 
+img_name = ''
+mod_path = '/app/MD_Web/app/model/'
 
 # server to client setting
 top_rank = 3  # 예측한 것 중에서 상위 n 순위까지만 전송함
