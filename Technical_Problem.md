@@ -30,6 +30,6 @@ We decided collecting data through youtube. youtube offers mp4 format or mp3 for
   audio channel = mono ( 1 is mono 2 is stereo)
   
   #### 3. Execute FFMPEG
-  ffmpeg -i <path and file name of origin record file> -ab 128000 -ac 1 -ar 44100 <path and file name of converted file>
+  ffmpeg -i [path and file name of origin record file] -ab 128000 -ac 1 -ar 44100 [path and file name of converted file]
   
   
