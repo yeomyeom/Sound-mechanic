@@ -17,7 +17,7 @@ The objective is to build a service that can help car owners identifier car issu
 ## Machine Learning
   * For each car sound, download as much as possible from youtube containing each sound
   * Extract the portion of audio from each video that is the car sound and export it as a wav
-  * Convert each wav file into a [**spectrogram**](https://towardsdatascience.com/getting-to-know-the-mel-spectrogram-31bca3e2d9d0) image
+  * Convert each wav file into a [**mel - spectrogram**](https://towardsdatascience.com/getting-to-know-the-mel-spectrogram-31bca3e2d9d0) image
   * Split data into training, validation and test set
   * Create a classifier for the images of the car sounds
   * Try data augmentation
