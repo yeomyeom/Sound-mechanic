@@ -24,3 +24,10 @@ The objective is to build a service that can help car owners identifier car issu
   * Try different architectures
   * Make classifier as a web service
   * Track use of classifier
+
+## Used Library
+ * pytorch
+ * Fast.ai
+ * pytube
+ * librosa
+ * pydub
