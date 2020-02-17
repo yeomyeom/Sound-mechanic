@@ -6,12 +6,12 @@ Cars being to show more issues as they age. Many car owners are not mechanics an
 
 # Objective
 The objective is to build a service that can help car owners identifier car issues when their car makes unusual noises. This service should be an andriod app that will allow users to record a car sound, upload the sound to a server, and have that sound classified into the proper issue. The following list of car sounds should be supported for classification:
-  *Bad Ball Joint
-  *Bad Brake Pad
-  *Engine Seizing Up
-  *Failing water pump
-  *Hole in muffler
-  *No Problem
+  * Bad Ball Joint
+  * Bad Brake Pad
+  * Engine Seizing Up
+  * Failing water pump
+  * Hole in muffler
+  * No Problem
   
 # Tasks
 ## Machine Learning
