@@ -12,7 +12,7 @@ The objective is to build a service that can help car owners identifier car issu
   * Failing water pump
   * Hole in muffler
   * No Problem
-  
+
 # Tasks
 ## Machine Learning
   * For each car sound, download as much as possible from youtube containing each sound
@@ -24,7 +24,18 @@ The objective is to build a service that can help car owners identifier car issu
   * Try different architectures
   * Make classifier as a web service
   * Track use of classifier
-
+     
+## User interface
+   ![01](./01.jpg)   
+   click diagnose button   
+      
+   ![02](./02.jpg)   
+   record engine sound   
+      
+   ![03](./03.jpg)   
+   result   
+      
+      
 ## Used Library
  * pytorch
  * Fast.ai

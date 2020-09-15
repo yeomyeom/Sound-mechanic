@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <LinearLayout
+        android:id = "@+id/loadlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <com.mingle.widget.LoadingView
+            android:id="@+id/loadView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <TextView
+            android:id = "@+id/loadTextView"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="Loading..." />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/submitlayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_vertical"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/issueImage"
+            android:layout_width="match_parent"
+            android:layout_height="240dp"
+            android:src="@drawable/failing_water_pump" />
+
+        <TextView
+            android:id = "@+id/cause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:gravity="center"
+            android:text="bad brake pad"
+            android:textSize="25dp" />
+
+        <TextView
+            android:id = "@+id/other_cause"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:gravity="center"
+            android:text="other_cause"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id = "@+id/solution"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="Check brake pad!!!\nGo to the car center"
+            android:textColor="@color/red"
+            android:textSize="15dp" />
+
+        <Button
+            android:id ="@+id/exitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="10dp"
+            android:text="EXIT" />
+    </LinearLayout>
+</RelativeLayout>
