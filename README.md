@@ -1,7 +1,7 @@
 # Sound-mechanic
 
 # Problem
-There wer over 275 million cars on the road in the U.S in 2019 with an average age of 11.8 years old.
+There were over 275 million cars on the road in the U.S in 2019 with an average age of 11.8 years old.
 Cars being to show more issues as they age. Many car owners are not mechanics and must bring their cars into an auto shop to diagnose these issues and have them fixed. Many seasoned mechanics can easily identify car issues when a car makes an unusual sounds. We want to provide car owners the ability to identify their car issues by sound without the help of a mechanic so that the car owner can use that information to get better repair quotes or to consider fixing the issue on their own.
 
 # Objective
